@@ -1,0 +1,215 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* 布局容器 */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+    width: 250px;
+    background-color: #0f3460;
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 一级标题样式 */
+.main-title {
+    text-align: center;
+    color: #4cc9f0;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding: 0 20px 20px;
+    border-bottom: 2px solid #4cc9f0;
+}
+
+/* 二级标题样式 */
+.category-title {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+.category-title i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.category-title:hover {
+    background-color: #16213e;
+    border-left-color: #4cc9f0;
+}
+
+.category-title.active {
+    background-color: #16213e;
+    border-left-color: #4cc9f0;
+    color: #4cc9f0;
+}
+
+/* 三级标题容器 */
+.subcategories {
+    display: none;
+    background-color: #0a2647;
+    padding: 10px 0;
+}
+
+.category-title.active + .subcategories {
+    display: block;
+}
+
+/* 三级标题样式 */
+.subcategory-title {
+    padding: 12px 20px 12px 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.subcategory-title i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.subcategory-title:hover {
+    background-color: #0d2d52;
+}
+
+/* 三级标题颜色 */
+.subcategory-common {
+    color: #4a8fe7; /* 蓝色 */
+}
+
+.subcategory-unique {
+    color: #a855f7; /* 紫色 */
+}
+
+.subcategory-set {
+    color: #10b981; /* 绿色 */
+}
+
+.subcategory-epic {
+    color: #f59e0b; /* 橙色 */
+}
+
+.subcategory-affix {
+    color: #ff6b6b; /* 红色 */
+}
+/* 主内容区样式 */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.content-header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #4cc9f0;
+}
+
+.content-title {
+    color: #4cc9f0;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content-description {
+    color: #a5b4cb;
+    font-size: 1.1rem;
+}
+
+.content-body {
+    background-color: #0f3460;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content-body p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* 品质列表样式 */
+.quality-list {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.quality-list li {
+    margin-bottom: 8px;
+}
+
+.quality-common {
+    color: #4a8fe7;
+    font-weight: bold;
+}
+
+.quality-unique {
+    color: #a855f7;
+    font-weight: bold;
+}
+
+.quality-set {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.quality-epic {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.quality-affix {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+.instruction {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .category-title {
+        padding: 12px 20px;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .content-title {
+        font-size: 1.7rem;
+    }
+}

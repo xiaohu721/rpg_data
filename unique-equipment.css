@@ -1,0 +1,114 @@
+/* 独特装备表格样式 */
+.unique-equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+/* 方法3：为所有列设置百分比宽度 */
+.unique-equipment-table th:nth-child(1), 
+.unique-equipment-table td:nth-child(1) {
+    width: 6%; /* 第一列 */
+}
+
+.unique-equipment-table th:nth-child(2), 
+.unique-equipment-table td:nth-child(2) {
+    width: 6%; /* 第二列 */
+}
+
+.unique-equipment-table th:nth-child(3), 
+.unique-equipment-table td:nth-child(3) {
+    width: 6%; /* 第三列 */
+}
+
+.unique-equipment-table th:nth-child(4), 
+.unique-equipment-table td:nth-child(4) {
+    width: 10%; /* 第四列 */
+}
+
+.unique-equipment-table th:nth-child(5), 
+.unique-equipment-table td:nth-child(5) {
+    width: 10%; /* 第五列 */
+}
+
+.unique-equipment-table th:nth-child(6), 
+.unique-equipment-table td:nth-child(6) {
+    width: 44%; /* 第六列 */
+}
+
+.unique-equipment-table th:nth-child(7), 
+.unique-equipment-table td:nth-child(7) {
+    width: 6%; /* 第七列 */
+}
+
+.unique-equipment-table th:nth-child(8), 
+.unique-equipment-table td:nth-child(8) {
+    width: 6%; /* 第八列 */
+}
+
+.unique-equipment-table th:nth-child(9), 
+.unique-equipment-table td:nth-child(9) {
+    width: 6%; /* 第九列 */
+}
+
+.unique-equipment-table th,
+.unique-equipment-table td {
+    border: 1px solid #a855f7;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 60px;
+    height: 60px;
+}
+
+.unique-equipment-table th {
+    background-color: #1e1b4b;
+    color: #ff3264;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.unique-equipment-table td {
+    background-color: #1e1b4b;
+    font-size: 12px;
+}
+
+.unique-equipment-table .image-cell {
+    padding: 5px;
+}
+
+.unique-equipment-table .item-image {
+    width: 50px;
+    height: 50px;
+    background-color: #2d3748;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.unique-equipment-table .item-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .unique-equipment-table {
+        font-size: 0.8rem;
+    }
+    
+    .unique-equipment-table th,
+    .unique-equipment-table td {
+        padding: 5px;
+        min-width: 40px;
+        height: 40px;
+    }
+    
+    .unique-equipment-table .item-image {
+        width: 30px;
+        height: 30px;
+    }
+}

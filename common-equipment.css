@@ -1,0 +1,114 @@
+/* 普通装备表格样式 */
+.common-equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* 方法3：为所有列设置百分比宽度 */
+.common-equipment-table th:nth-child(1), 
+.common-equipment-table td:nth-child(1) {
+    width: 6%; /* 第一列 */
+}
+
+.common-equipment-table th:nth-child(2), 
+.common-equipment-table td:nth-child(2) {
+    width: 6%; /* 第二列 */
+}
+
+.common-equipment-table th:nth-child(3), 
+.common-equipment-table td:nth-child(3) {
+    width: 10%; /* 第三列 */
+}
+
+.common-equipment-table th:nth-child(4), 
+.common-equipment-table td:nth-child(4) {
+    width: 10%; /* 第四列 */
+}
+
+.common-equipment-table th:nth-child(5), 
+.common-equipment-table td:nth-child(5) {
+    width: 10%; /* 第五列 */
+}
+
+.common-equipment-table th:nth-child(6), 
+.common-equipment-table td:nth-child(6) {
+    width: 10%; /* 第六列 */
+}
+
+.common-equipment-table th:nth-child(7), 
+.common-equipment-table td:nth-child(7) {
+    width: 10%; /* 第七列 */
+}
+
+.common-equipment-table th:nth-child(8), 
+.common-equipment-table td:nth-child(8) {
+    width: 32%; /* 第八列 */
+}
+
+.common-equipment-table th:nth-child(9), 
+.common-equipment-table td:nth-child(9) {
+    width: 6%; /* 第九列 */
+}
+.common-equipment-table th,
+.common-equipment-table td {
+    border: 1px solid #4a8fe7;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 60px;
+    height: 60px;
+}
+
+.common-equipment-table th {
+    background-color: #4a8fe7;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+.common-equipment-table td {
+    background-color: #0a2647;
+}
+
+.common-equipment-table .merged-cell {
+    background-color: #0d2d52;
+    font-weight: bold;
+}
+
+.common-equipment-table .image-cell {
+    padding: 5px;
+}
+
+.common-equipment-table .item-image {
+    width: 50px;
+    height: 50px;
+    background-color: #2d3748;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a0aec0;
+    font-size: 0.7rem;
+    overflow: hidden;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .common-equipment-table {
+        font-size: 0.8rem;
+    }
+    
+    .common-equipment-table th,
+    .common-equipment-table td {
+        padding: 5px;
+        min-width: 40px;
+        height: 40px;
+    }
+    
+    .common-equipment-table .item-image {
+        width: 30px;
+        height: 30px;
+        font-size: 0.6rem;
+    }
+}

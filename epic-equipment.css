@@ -1,0 +1,128 @@
+/* 史诗装备表格样式 */
+.epic-equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+/* 方法3：为所有列设置百分比宽度 */
+.epic-equipment-table th:nth-child(1), 
+.epic-equipment-table td:nth-child(1) {
+    width: 4%; /* 第一列 */
+}
+
+.epic-equipment-table th:nth-child(2), 
+.epic-equipment-table td:nth-child(2) {
+    width: 5%; /* 第二列 */
+}
+
+.epic-equipment-table th:nth-child(3), 
+.epic-equipment-table td:nth-child(3) {
+    width: 5%; /* 第三列 */
+}
+
+.epic-equipment-table th:nth-child(4), 
+.epic-equipment-table td:nth-child(4) {
+    width: 7%; /* 第四列 */
+}
+
+.epic-equipment-table th:nth-child(5), 
+.epic-equipment-table td:nth-child(5) {
+    width: 7%; /* 第五列 */
+}
+
+.epic-equipment-table th:nth-child(6), 
+.epic-equipment-table td:nth-child(6) {
+    width: 7%; /* 第六列 */
+}
+
+.epic-equipment-table th:nth-child(7), 
+.epic-equipment-table td:nth-child(7) {
+    width: 7%; /* 第七列 */
+}
+
+.epic-equipment-table th:nth-child(8), 
+.epic-equipment-table td:nth-child(8) {
+    width: 7%; /* 第八列 */
+}
+
+.epic-equipment-table th:nth-child(9), 
+.epic-equipment-table td:nth-child(9) {
+    width: 37%; /* 第九列 */
+}
+
+.epic-equipment-table th:nth-child(10), 
+.epic-equipment-table td:nth-child(10) {
+    width: 4%; /* 第十列 */
+}
+
+.epic-equipment-table th:nth-child(11), 
+.epic-equipment-table td:nth-child(11) {
+    width: 6%; /* 第十一列 */
+}
+
+.epic-equipment-table th:nth-child(12), 
+.epic-equipment-table td:nth-child(12) {
+    width: 4%; /* 第十二列 */
+}
+.epic-equipment-table th,
+.epic-equipment-table td {
+    border: 1px solid #f59e0b;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+    height: 50px;
+}
+
+.epic-equipment-table th {
+    background-color: #854d0e;
+    color: #0096ff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.epic-equipment-table td {
+    background-color: #854d0e;
+    font-size: 12px;
+}
+
+.epic-equipment-table .image-cell {
+    padding: 5px;
+}
+
+.epic-equipment-table .item-image {
+    width: 45px;
+    height: 45px;
+    background-color: #2d3748;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.epic-equipment-table .item-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .epic-equipment-table {
+        font-size: 0.7rem;
+    }
+    
+    .epic-equipment-table th,
+    .epic-equipment-table td {
+        padding: 4px;
+        min-width: 35px;
+        height: 35px;
+    }
+    
+    .epic-equipment-table .item-image {
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秘境历险资料库</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 动态加载的CSS文件将由JavaScript处理 -->
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <h1 class="main-title">秘境历险资料库</h1>
+            
+            <!-- 二级标题区域 -->
+            <div class="category-title active">
+                <i class="fas fa-shield-alt"></i> 装备
+            </div>
+            <!-- 装备的三级标题 -->
+            <div class="subcategories">
+                <div class="subcategory-title subcategory-common" data-quality="common">
+                    <i class="fas fa-circle"></i> 普通
+                </div>
+                <div class="subcategory-title subcategory-unique" data-quality="unique">
+                    <i class="fas fa-circle"></i> 独特
+                </div>
+                <div class="subcategory-title subcategory-set" data-quality="set">
+                    <i class="fas fa-circle"></i> 套装
+                </div>
+                <div class="subcategory-title subcategory-epic" data-quality="epic">
+                    <i class="fas fa-circle"></i> 史诗
+                </div>
+                <div class="subcategory-title subcategory-affix" data-quality="affix">
+                    <i class="fas fa-circle"></i> 词缀
+                </div>
+            </div>
+            
+            <div class="category-title">
+                <i class="fas fa-fire"></i> 技能
+            </div>
+            <div class="category-title">
+                <i class="fas fa-dragon"></i> 怪物
+            </div>
+            <div class="category-title">
+                <i class="fas fa-user"></i> NPC
+            </div>
+            <div class="category-title">
+                <i class="fas fa-star"></i> 天赋
+            </div>
+            <div class="category-title">
+                <i class="fas fa-gem"></i> 宝石
+            </div>
+        </div>
+        
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <div class="content-header">
+                <h2 class="content-title">装备资料库</h2>
+                <p class="content-description">探索秘境世界中的各种装备，从普通到史诗，应有尽有</p>
+            </div>
+            
+            <div class="content-body" id="content-body">
+                <p>欢迎来到秘境历险装备资料库！这里汇集了游戏中所有装备的详细信息。</p>
+                <p>您可以通过左侧导航栏查看不同品质的装备：</p>
+                <ul class="quality-list">
+                    <li><span class="quality-common">普通装备</span> - 基础装备，可以获得很多随机词缀</li>
+                    <li><span class="quality-unique">独特装备</span> - 具有特殊属性的稀有装备，少量词缀</li>
+                    <li><span class="quality-set">套装装备</span> - 收集多件可激活额外效果</li>
+                    <li><span class="quality-epic">史诗装备</span> - 具有特殊属性的强大的装备</li>
+                    <li><span class="quality-affix">装备词缀</span> - 普通和独特装备可获取的词缀</li>
+                </ul>
+                <p class="instruction">请点击左侧的品质分类查看详细装备信息。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Font Awesome图标库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <!-- 引入JavaScript文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
