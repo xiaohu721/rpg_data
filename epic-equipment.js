@@ -61,11 +61,11 @@ function displayEpicEquipmentTable(contentBody, quality, color) {
                     <th>图标</th>
                     <th>名称</th>
                     <th>底材</th>
-                    <th>基础属性①</th>
-                    <th>基础属性②</th>
-                    <th>基础属性③</th>
-                    <th>基础属性④</th>
-                    <th>基础属性⑤</th>
+                    <th>固定属性①</th>
+                    <th>固定属性②</th>
+                    <th>固定属性③</th>
+                    <th>固定属性④</th>
+                    <th>固定属性⑤</th>
                     <th>特殊属性</th>
                     <th>等级</th>
                     <th>掉落</th>
