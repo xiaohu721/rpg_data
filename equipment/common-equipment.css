@@ -3,6 +3,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    table-layout: fixed;
 }
 
 /* 方法3：为所有列设置百分比宽度 */
@@ -18,7 +19,7 @@
 
 .common-equipment-table th:nth-child(3), 
 .common-equipment-table td:nth-child(3) {
-    width: 10%; /* 第三列 */
+    width: 6%; /* 第三列 */
 }
 
 .common-equipment-table th:nth-child(4), 
@@ -43,13 +44,19 @@
 
 .common-equipment-table th:nth-child(8), 
 .common-equipment-table td:nth-child(8) {
-    width: 32%; /* 第八列 */
+    width: 26%; /* 第八列 */
 }
 
 .common-equipment-table th:nth-child(9), 
 .common-equipment-table td:nth-child(9) {
     width: 6%; /* 第九列 */
 }
+
+.common-equipment-table th:nth-child(10), 
+.common-equipment-table td:nth-child(10) {
+    width: 10%; /* 第十列：来源商店 */
+}
+
 .common-equipment-table th,
 .common-equipment-table td {
     border: 1px solid #4a8fe7;
@@ -61,13 +68,19 @@
 }
 
 .common-equipment-table th {
-    background-color: #4a8fe7;
-    color: #1a1a2e;
+    background-color: #0a2647;
+    color: #96c800;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .common-equipment-table td {
     background-color: #0a2647;
+    font-size: 14px;
+}
+
+.common-equipment-table td:nth-child(n+9):nth-child(-n+10) {
+    white-space: pre-line;/* 保留换行符并显示为换行 */
 }
 
 .common-equipment-table .merged-cell {

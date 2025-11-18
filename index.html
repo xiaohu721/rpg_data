@@ -13,43 +13,99 @@
         <div class="sidebar">
             <h1 class="main-title">秘境历险资料库</h1>
             
-            <!-- 二级标题区域 -->
+            <!-- 装备二级标题 -->
             <div class="category-title active">
                 <i class="fas fa-shield-alt"></i> 装备
             </div>
             <!-- 装备的三级标题 -->
             <div class="subcategories">
-                <div class="subcategory-title subcategory-common" data-quality="common">
+                <div class="subcategory-title subcategory-common" data-quality="common" data-category="equipment">
                     <i class="fas fa-circle"></i> 普通
                 </div>
-                <div class="subcategory-title subcategory-unique" data-quality="unique">
+                <div class="subcategory-title subcategory-unique" data-quality="unique" data-category="equipment">
                     <i class="fas fa-circle"></i> 独特
                 </div>
-                <div class="subcategory-title subcategory-set" data-quality="set">
+                <div class="subcategory-title subcategory-set" data-quality="set" data-category="equipment">
                     <i class="fas fa-circle"></i> 套装
                 </div>
-                <div class="subcategory-title subcategory-epic" data-quality="epic">
+                <div class="subcategory-title subcategory-epic" data-quality="epic" data-category="equipment">
                     <i class="fas fa-circle"></i> 史诗
                 </div>
-                <div class="subcategory-title subcategory-affix" data-quality="affix">
+                <div class="subcategory-title subcategory-affix" data-quality="affix" data-category="equipment">
                     <i class="fas fa-circle"></i> 词缀
+                </div>
+                <div class="subcategory-title subcategory-gem" data-quality="gem" data-category="equipment">
+                    <i class="fas fa-circle"></i> 宝石
                 </div>
             </div>
             
+            <!-- 技能二级标题 -->
             <div class="category-title">
                 <i class="fas fa-fire"></i> 技能
             </div>
+            <!-- 技能的三级标题 -->
+            <div class="subcategories">
+                <div class="subcategory-title subcategory-attribute" data-quality="attribute" data-category="skills">
+                    <i class="fas fa-circle"></i> 属性
+                </div>
+                <div class="subcategory-title subcategory-profession" data-quality="profession" data-category="skills">
+                    <i class="fas fa-circle"></i> 职业
+                </div>
+                <div class="subcategory-title subcategory-mastery" data-quality="mastery" data-category="skills">
+                    <i class="fas fa-circle"></i> 专精
+                </div>
+            </div>
+            
+            <!-- 怪物二级标题 -->
             <div class="category-title">
                 <i class="fas fa-dragon"></i> 怪物
             </div>
-            <div class="category-title">
-                <i class="fas fa-user"></i> NPC
+            <!-- 怪物的三级标题 -->
+            <div class="subcategories">
+                <div class="subcategory-title subcategory-normal" data-quality="normal" data-category="monsters">
+                    <i class="fas fa-circle"></i> 普通怪物
+                </div>
+                <div class="subcategory-title subcategory-boss" data-quality="boss" data-category="monsters">
+                    <i class="fas fa-circle"></i> 首领BOSS
+                </div>
+                <div class="subcategory-title subcategory-property" data-quality="property" data-category="monsters">
+                    <i class="fas fa-circle"></i> 属性加成
+                </div>
             </div>
+            
+            <!-- 地图二级标题 -->
             <div class="category-title">
-                <i class="fas fa-star"></i> 天赋
+                <i class="fas fa-map"></i> 地图
             </div>
-            <div class="category-title">
-                <i class="fas fa-gem"></i> 宝石
+            <!-- 地图的三级标题 -->
+            <div class="subcategories">
+                <div class="subcategory-title subcategory-prologue" data-quality="prologue" data-category="maps">
+                    <i class="fas fa-circle"></i> 序章
+                </div>
+                <div class="subcategory-title subcategory-oasis" data-quality="oasis" data-category="maps">
+                    <i class="fas fa-circle"></i> ①绿洲
+                </div>
+                <div class="subcategory-title subcategory-desert" data-quality="desert" data-category="maps">
+                    <i class="fas fa-circle"></i> ②荒漠
+                </div>
+                <div class="subcategory-title subcategory-hell" data-quality="hell" data-category="maps">
+                    <i class="fas fa-circle"></i> ③地狱
+                </div>
+                <div class="subcategory-title subcategory-ocean" data-quality="ocean" data-category="maps">
+                    <i class="fas fa-circle"></i> ④海洋
+                </div>
+                <div class="subcategory-title subcategory-sky" data-quality="sky" data-category="maps">
+                    <i class="fas fa-circle"></i> ⑤天空
+                </div>
+                <div class="subcategory-title subcategory-city" data-quality="city" data-category="maps">
+                    <i class="fas fa-circle"></i> ⑥城邦
+                </div>
+                <div class="subcategory-title subcategory-snowfield" data-quality="snowfield" data-category="maps">
+                    <i class="fas fa-circle"></i> ⑦雪原DLC
+                </div>
+                <div class="subcategory-title subcategory-lightdark" data-quality="lightdark" data-category="maps">
+                    <i class="fas fa-circle"></i> ⑧光暗DLC
+                </div>
             </div>
         </div>
         
@@ -69,6 +125,7 @@
                     <li><span class="quality-set">套装装备</span> - 收集多件可激活额外效果</li>
                     <li><span class="quality-epic">史诗装备</span> - 具有特殊属性的强大的装备</li>
                     <li><span class="quality-affix">装备词缀</span> - 普通和独特装备可获取的词缀</li>
+                    <li><span class="quality-gem">宝石</span> - 镶嵌宝石提升装备属性，获得额外能力</li>
                 </ul>
                 <p class="instruction">请点击左侧的品质分类查看详细装备信息。</p>
             </div>

@@ -39,7 +39,8 @@ function displayCommonEquipmentTable(contentBody, quality, color) {
             '1-6': '基础属性③',
             '1-7': '基础属性④',
             '1-8': '基础属性⑤',
-            '1-9': '价值参数'
+            '1-9': '价值参数',
+            '1-10': '来源商店' // 新增列
         },
         
         // 装备名称数据
@@ -240,6 +241,57 @@ function displayCommonEquipmentTable(contentBody, quality, color) {
             '46-9': '100',
             '47-9': '120',
             '48-9': '200'
+        },
+        
+        // 第2-48行的第10列数据 (来源商店) - 新增列，暂时为空
+        stores: {
+            '2-10': '黑石商贩\n[峡谷据点]',
+            '3-10': '黑石商贩\n[峡谷据点]',
+            '4-10': '正义使者\n[地狱入口]',
+            '5-10': '织女\n[桃林村]',
+            '6-10': '奥秘收藏家\n[空中驿站]',
+            '7-10': '精灵旗手★\n[天空之城]',
+            '8-10': '耐冻小海象\n[海象栖息地]',
+            '9-10': '皇家鞋匠\n[地下城水道]',
+            '10-10': '皇家鞋匠\n[地下城水道]',
+            '11-10': '织女\n[桃林村]',
+            '12-10': '奥秘收藏家\n[空中驿站]',
+            '13-10': '魔龙隐士★\n[龙宫]',
+            '14-10': '灵龙隐士★\n[龙宫]',
+            '15-10': '盗圣★\n[地窖]',
+            '16-10': '盗圣★\n[地窖]',
+            '17-10': '荒岛救济员\n[滩头]',
+            '18-10': '酒保\n[黄沙城]',
+            '19-10': '空军上将\n[深渊隐秘住所]',
+            '20-10': '',
+            '21-10': '武器大师\n[巨木林营地]',
+            '22-10': '皇家军工团\n[地下城水道]',
+            '23-10': '丛林破坏者★\n[湖心岛]',
+            '24-10': '',
+            '25-10': '猎户\n[桃林村]',
+            '26-10': '苍白死神★\n[无间炼狱]',
+            '27-10': '武器大师\n[巨木林营地]',
+            '28-10': '冰河神卫★\n[融雪洼地]',
+            '29-10': '刀哥\n[黄沙城]',
+            '30-10': '皇家军工团\n[地下城水道]',
+            '31-10': '珍宝收藏家\n[空中驿站]',
+            '32-10': '',
+            '33-10': '刀哥\n[黄沙城]',
+            '34-10': '兽人巴图鲁\n[黄沙城]',
+            '35-10': '黑暗死神★\n[无间炼狱]',
+            '36-10': '海象冰雕师[制作]\n[海象栖息地]',
+            '37-10': '魔导师\n[巨木林营地]',
+            '38-10': '骸骨商贩★\n[守望者之墓]',
+            '39-10': '骸骨商贩★\n[守望者之墓]',
+            '40-10': '',
+            '41-10': '魔导师\n[巨木林营地]',
+            '42-10': '珍宝收藏家\n[空中驿站]',
+            '43-10': '精灵旗手★\n[天空之城]',
+            '44-10': '',
+            '45-10': '铸盾师\n[黄沙城]',
+            '46-10': '猎户\n[桃林村]',
+            '47-10': '铸盾师\n[黄沙城]',
+            '48-10': ''
         }
     };
     
@@ -248,7 +300,8 @@ function displayCommonEquipmentTable(contentBody, quality, color) {
         ...tableData.header,
         ...tableData.equipmentNames,
         ...tableData.attributes,
-        ...tableData.values
+        ...tableData.values,
+        ...tableData.stores // 新增来源商店数据
     };
     
     // 转换为特殊单元格格式
@@ -274,61 +327,61 @@ function displayCommonEquipmentTable(contentBody, quality, color) {
                 <tr>
     `;
     
+    // 生成表头 - 10列
+    for (let col = 1; col <= 10; col++) {
+        const cellKey = `1-${col}`;
+        tableHTML += `<th id="common-cell-${cellKey}">${specialCells[cellKey].content}</th>`;
+    }
     
     tableHTML += `</tr></thead><tbody>`;
     
-    // 添加表格内容 - 48行9列
-    for (let row = 1; row <= 48; row++) {
+    // 添加表格内容 - 48行10列
+    for (let row = 2; row <= 48; row++) {
         tableHTML += `<tr>`;
         
-        for (let col = 1; col <= 9; col++) {
+        for (let col = 1; col <= 10; col++) {
             const cellKey = `${row}-${col}`;
             const isSpecialCell = specialCells.hasOwnProperty(cellKey);
             const cellType = isSpecialCell ? specialCells[cellKey].type : 'normal';
             
-            // 第一行特殊处理
-            if (row === 1) {
-                tableHTML += `<td id="common-cell-${cellKey}" style="color: #ff6b6b; font-weight: bold;">${specialCells[cellKey].content}</td>`;
-            } else {
-                // 第一列合并处理
-                if (col === 1) {
-                    // 检查当前行是否是某个合并组的起始行
-                    const mergeGroup = mergeGroups.find(group => group.start === row);
-                    if (mergeGroup) {
-                        const rowspan = mergeGroup.end - mergeGroup.start + 1;
-                        tableHTML += `<td class="merged-cell" id="common-cell-${cellKey}" rowspan="${rowspan}" style="font-weight: bold; background-color: #0d2d52;">${mergeGroup.text}</td>`;
-                    }
-                    // 如果不是合并组的起始行，则跳过（因为已经被合并）
-                } 
-                // 第二列处理图片
-                else if (col === 2) {
-                    if (isSpecialCell && cellType === 'image') {
-                        // 特殊图片单元格
-                        tableHTML += `
-                            <td class="image-cell" id="common-cell-${cellKey}">
-                                <div class="item-image">
-                                    <img src="${specialCells[cellKey].content}" alt="装备图片" style="max-width: 100%; max-height: 100%;">
-                                </div>
-                            </td>
-                        `;
-                    } else {
-                        // 普通图片单元格 - 空白图片
-                        tableHTML += `
-                            <td class="image-cell" id="common-cell-${cellKey}">
-                                <div class="item-image">空白</div>
-                            </td>
-                        `;
-                    }
-                } 
-                // 其他列处理文本
-                else {
-                    if (isSpecialCell && cellType === 'text') {
-                        // 特殊文本单元格
-                        tableHTML += `<td id="common-cell-${cellKey}" style="color: #ffffff; font-weight: bold;">${specialCells[cellKey].content}</td>`;
-                    } else {
-                        // 普通文本单元格 - 空白
-                        tableHTML += `<td id="common-cell-${cellKey}"></td>`;
-                    }
+            // 第一列合并处理
+            if (col === 1) {
+                // 检查当前行是否是某个合并组的起始行
+                const mergeGroup = mergeGroups.find(group => group.start === row);
+                if (mergeGroup) {
+                    const rowspan = mergeGroup.end - mergeGroup.start + 1;
+                    tableHTML += `<td class="merged-cell" id="common-cell-${cellKey}" rowspan="${rowspan}" style="font-weight: bold; background-color: #0d2d52;">${mergeGroup.text}</td>`;
+                }
+                // 如果不是合并组的起始行，则跳过（因为已经被合并）
+            } 
+            // 第二列处理图片
+            else if (col === 2) {
+                if (isSpecialCell && cellType === 'image') {
+                    // 特殊图片单元格
+                    tableHTML += `
+                        <td class="image-cell" id="common-cell-${cellKey}">
+                            <div class="item-image">
+                                <img src="${specialCells[cellKey].content}" alt="装备图片" style="max-width: 100%; max-height: 100%;">
+                            </div>
+                        </td>
+                    `;
+                } else {
+                    // 普通图片单元格 - 空白图片
+                    tableHTML += `
+                        <td class="image-cell" id="common-cell-${cellKey}">
+                            <div class="item-image">空白</div>
+                        </td>
+                    `;
+                }
+            } 
+            // 其他列处理文本
+            else {
+                if (isSpecialCell && cellType === 'text') {
+                    // 特殊文本单元格
+                    tableHTML += `<td id="common-cell-${cellKey}" style="color: #ffffff; font-weight: bold;">${specialCells[cellKey].content}</td>`;
+                } else {
+                    // 普通文本单元格 - 空白
+                    tableHTML += `<td id="common-cell-${cellKey}"></td>`;
                 }
             }
         }

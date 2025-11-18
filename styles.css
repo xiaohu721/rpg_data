@@ -24,6 +24,8 @@ body {
     background-color: #0f3460;
     padding: 20px 0;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 /* 一级标题样式 */
@@ -114,11 +116,77 @@ body {
 .subcategory-affix {
     color: #ff6b6b; /* 红色 */
 }
+
+.subcategory-gem {
+    color: #00d4ff; /* 青色 */
+}
+
+.subcategory-attribute {
+    color: #06b6d4; /* 青色 */
+}
+
+.subcategory-profession {
+    color: #ef4444; /* 红色 */
+}
+
+.subcategory-mastery {
+    color: #f97316; /* 橙色 */
+}
+
+.subcategory-normal {
+    color: #84cc16; /* 绿色 */
+}
+
+.subcategory-boss {
+    color: #dc2626; /* 深红色 */
+}
+
+.subcategory-property {
+    color: #7e22ce; /* 深紫色 */
+}
+
+.subcategory-prologue {
+    color: #0ea5e9; /* 亮蓝色 */
+}
+
+.subcategory-oasis {
+    color: #22c55e; /* 绿色 */
+}
+
+.subcategory-desert {
+    color: #eab308; /* 黄色 */
+}
+
+.subcategory-hell {
+    color: #ef4444; /* 红色 */
+}
+
+.subcategory-ocean {
+    color: #3b82f6; /* 蓝色 */
+}
+
+.subcategory-sky {
+    color: #8b5cf6; /* 紫色 */
+}
+
+.subcategory-city {
+    color: #6b7280; /* 灰色 */
+}
+
+.subcategory-snowfield {
+    color: #d1d5db; /* 浅灰色 */
+}
+
+.subcategory-lightdark {
+    color: #1e293b; /* 深灰色 */
+}
+
 /* 主内容区样式 */
 .main-content {
     flex: 1;
     padding: 30px;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    overflow-y: auto;
 }
 
 .content-header {
@@ -143,6 +211,7 @@ body {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    min-height: 500px;
 }
 
 .content-body p {
@@ -185,6 +254,12 @@ body {
     color: #ff6b6b;
     font-weight: bold;
 }
+
+.quality-gem {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
 .instruction {
     margin-top: 20px;
     font-style: italic;
@@ -199,6 +274,7 @@ body {
     .sidebar {
         width: 100%;
         padding: 10px 0;
+        max-height: 300px;
     }
     
     .category-title {

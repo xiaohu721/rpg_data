@@ -1,0 +1,117 @@
+/* 宝石装备表格样式 */
+.gem-equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+/* 宝石表格列宽设置 - 6列 */
+.gem-equipment-table th:nth-child(1), 
+.gem-equipment-table td:nth-child(1) {
+    width: 4%; /* 第一列：图标 */
+}
+
+.gem-equipment-table th:nth-child(2), 
+.gem-equipment-table td:nth-child(2) {
+    width: 5%; /* 第二列：名称 */
+}
+
+.gem-equipment-table th:nth-child(3), 
+.gem-equipment-table td:nth-child(3) {
+    width: 29%; /* 第三列：1 */
+}
+
+.gem-equipment-table th:nth-child(4), 
+.gem-equipment-table td:nth-child(4) {
+    width: 29%; /* 第四列：2 */
+}
+
+.gem-equipment-table th:nth-child(5), 
+.gem-equipment-table td:nth-child(5) {
+    width: 29%; /* 第五列：3 */
+}
+
+.gem-equipment-table th:nth-child(6), 
+.gem-equipment-table td:nth-child(6) {
+    width: 4%; /* 第六列：价值 */
+}
+
+.gem-equipment-table th,
+.gem-equipment-table td {
+    border: 1px solid #00d4ff;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 50px;
+    height: 50px;
+}
+
+.gem-equipment-table th {
+    background-color: #006266;
+    color: #ff3232;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.gem-equipment-table td {
+    background-color: #006266;
+    font-size: 12px;
+}
+
+.gem-equipment-table .image-cell {
+    padding: 5px;
+}
+
+.gem-equipment-table .item-image {
+    width: 45px;
+    height: 45px;
+    background-color: #2d3748;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gem-equipment-table .item-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 宝石表格标题样式 */
+.gem-table-title {
+    color: #00d4ff;
+    font-size: 24px;
+    margin: 30px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #00d4ff;
+}
+
+.gem-table-title:first-child {
+    margin-top: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gem-equipment-table {
+        font-size: 0.7rem;
+    }
+    
+    .gem-equipment-table th,
+    .gem-equipment-table td {
+        padding: 4px;
+        min-width: 35px;
+        height: 35px;
+    }
+    
+    .gem-equipment-table .item-image {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .gem-table-title {
+        font-size: 20px;
+    }
+}
