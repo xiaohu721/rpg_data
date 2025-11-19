@@ -3,36 +3,36 @@ function displayMasterySkillsTable(contentBody, quality, color) {
     // 角色名称与技能ID映射表
     const characterSkillMap = {
         // 力量职业组合
-        "110": { name: "炎魔", skillId: "110", headIcon: "hero/BTNHeroAvatarOfFlame.bmp" },
-        "120": { name: "雷神", skillId: "120", headIcon: "hero/BTNHeroMountainKing.bmp" },
-        "130": { name: "冰川勇士", skillId: "130", headIcon: "hero/BTNNagaMyrmidon.bmp"},
-        "140": { name: "狂战士", skillId: "140", headIcon: "hero/BTNChaosGrom.bmp" },
-        "150": { name: "圣骑士", skillId: "150", headIcon: "hero/BTNHeroPaladin.bmp" },
-        "160": { name: "深渊守卫", skillId: "160", headIcon: "hero/BTNPitLord.bmp" },
+        "110": { name: "炎魔", skillId: "110", headIcon: "hero/BTNHeroAvatarOfFlame.png" },
+        "120": { name: "雷神", skillId: "120", headIcon: "hero/BTNHeroMountainKing.png" },
+        "130": { name: "冰川勇士", skillId: "130", headIcon: "hero/BTNNagaMyrmidon.png"},
+        "140": { name: "狂战士", skillId: "140", headIcon: "hero/BTNChaosGrom.png" },
+        "150": { name: "圣骑士", skillId: "150", headIcon: "hero/BTNHeroPaladin.png" },
+        "160": { name: "深渊守卫", skillId: "160", headIcon: "hero/BTNPitLord.png" },
         
         // 灵巧职业组合
-        "210": { name: "烈火刀客", skillId: "210", headIcon: "hero/BTNFireBrewMaster.bmp" },
-        "220": { name: "暴风之爪", skillId: "220", headIcon: "hero/BTNShaman.bmp" },
-        "230": { name: "冰霜海妖", skillId: "230", headIcon: "hero/BTNSeaWitch.bmp" },
-        "240": { name: "刺客", skillId: "240", headIcon: "hero/BTNHeroWarden.bmp" },
-        "250": { name: "光剑士", skillId: "250", headIcon: "hero/BTNArthas.bmp" },
-        "260": { name: "暗影猎手", skillId: "260", headIcon: "hero/BTNHeroDemonHunter.bmp" },
+        "210": { name: "烈火刀客", skillId: "210", headIcon: "hero/BTNFireBrewMaster.png" },
+        "220": { name: "暴风之爪", skillId: "220", headIcon: "hero/BTNShaman.png" },
+        "230": { name: "冰霜海妖", skillId: "230", headIcon: "hero/BTNSeaWitch.png" },
+        "240": { name: "刺客", skillId: "240", headIcon: "hero/BTNHeroWarden.png" },
+        "250": { name: "光剑士", skillId: "250", headIcon: "hero/BTNArthas.png" },
+        "260": { name: "暗影猎手", skillId: "260", headIcon: "hero/BTNHeroDemonHunter.png" },
         
         // 智力职业组合
-        "310": { name: "火巫", skillId: "310", headIcon: "hero/BTNHeroBloodElfPrince.bmp" },
-        "320": { name: "御风者", skillId: "320", headIcon: "hero/BTNFurion.bmp" },
-        "330": { name: "冰雪法师", skillId: "330", headIcon: "hero/BTNJaina.bmp" },
-        "340": { name: "战斗法师", skillId: "340", headIcon: "hero/BTNSpellBreaker.bmp" },
-        "350": { name: "光辉女士", skillId: "350", headIcon: "hero/BTNSorceress.bmp" },
-        "360": { name: "邪恶巫师", skillId: "360", headIcon: "hero/BTNLichVersion2.bmp" },
+        "310": { name: "火巫", skillId: "310", headIcon: "hero/BTNHeroBloodElfPrince.png" },
+        "320": { name: "御风者", skillId: "320", headIcon: "hero/BTNFurion.png" },
+        "330": { name: "冰雪法师", skillId: "330", headIcon: "hero/BTNJaina.png" },
+        "340": { name: "战斗法师", skillId: "340", headIcon: "hero/BTNSpellBreaker.png" },
+        "350": { name: "光辉女士", skillId: "350", headIcon: "hero/BTNSorceress.png" },
+        "360": { name: "邪恶巫师", skillId: "360", headIcon: "hero/BTNLichVersion2.png" },
         
         // 统御职业组合
-        "410": { name: "地狱领主", skillId: "410", headIcon: "hero/BTNKiljaedin.bmp" },
-        "420": { name: "风暴之子", skillId: "420", headIcon: "hero/BTNStormBrewMaster.bmp" },
-        "430": { name: "寒冬领主", skillId: "430", headIcon: "hero/BTNRevenant.bmp" },
-        "440": { name: "战争领主", skillId: "440", headIcon: "hero/BTNBeastMaster.bmp" },
-        "450": { name: "神使", skillId: "450", headIcon: "hero/BTNPriest.bmp" },
-        "460": { name: "黑暗领主", skillId: "460", headIcon: "hero/BTNArchimonde.bmp" }
+        "410": { name: "地狱领主", skillId: "410", headIcon: "hero/BTNKiljaedin.png" },
+        "420": { name: "风暴之子", skillId: "420", headIcon: "hero/BTNStormBrewMaster.png" },
+        "430": { name: "寒冬领主", skillId: "430", headIcon: "hero/BTNRevenant.png" },
+        "440": { name: "战争领主", skillId: "440", headIcon: "hero/BTNBeastMaster.png" },
+        "450": { name: "神使", skillId: "450", headIcon: "hero/BTNPriest.png" },
+        "460": { name: "黑暗领主", skillId: "460", headIcon: "hero/BTNArchimonde.png" }
     };
 
     // 内置的专精JSON数据
