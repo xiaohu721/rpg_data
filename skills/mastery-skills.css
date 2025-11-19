@@ -1,0 +1,334 @@
+/* 专精表格样式 */
+.mastery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 50px; /* 添加足够的底部空间 */
+}
+
+/* 专精表格标题样式 */
+.mastery-table-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* 专精标题 - 紫色系 */
+.mastery-title {
+    color: #ffffff;
+    background-color: #7c3aed;
+    border: 3px solid #6d28d9;
+}
+
+/* 通用标题 - 灰白色系 */
+.general-title {
+    color: #000000;
+    background-color: #d1d5db;
+    border: 3px solid #9ca3af;
+}
+
+/* 专精表格样式 */
+.mastery-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    table-layout: fixed;
+    border: 2px solid; /* 添加表格边框 */
+}
+
+/* 专精技能表格样式 */
+.mastery-skill {
+    border-color: #6d28d9 !important; /* 紫色边框 */
+    background-color: rgba(124, 58, 237, 0.3); /* 暗紫色背景 */
+}
+
+/* 通用技能表格样式 */
+.general-skill {
+    border-color: #9ca3af !important; /* 灰色边框 */
+    background-color: rgba(209, 213, 219, 0.3); /* 浅灰色背景 */
+}
+
+/* 24列基础样式 */
+.mastery-table td {
+    border: 1px solid;
+    padding: 8px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+/* 第一行样式 - 主区域 */
+.main-area-row {
+    font-size: 16px;
+}
+
+/* 第二行样式 - 数据区域 */
+.data-area-row {
+    font-size: 12px;
+}
+
+/* 第三行样式 - 进阶区域 */
+.advancement-area-row {
+    font-size: 16px;
+}
+
+/* 技能图标样式 */
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #2d3748;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skill-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 进阶区域样式 */
+.advancement-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    min-height: 60px;
+}
+
+/* 进阶图标样式 */
+.advancement-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #374151;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.advancement-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 进阶文本样式 */
+.advancement-text {
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* 提示框样式 - 修复定位问题 */
+.advancement-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* 在单元格下方显示，留出间隙 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000; /* 提高z-index确保在最上层 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid #4b5563;
+}
+
+/* 修复进阶区域提示框显示 */
+.advancement-area-row td {
+    position: relative;
+}
+
+.advancement-area-row td:hover .advancement-tooltip {
+    display: block;
+}
+
+/* 角色表格样式 */
+.character-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+    background-color: rgba(124, 58, 237, 0.05);
+    border: 2px solid #6d28d9;
+}
+
+.character-table th,
+.character-table td {
+    border: 1px solid #6d28d9;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 角色表格表头样式 */
+.character-table th {
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #6d28d9;
+}
+
+/* 角色表格单元格样式 - 修复定位问题 */
+.character-cell {
+    cursor: pointer;
+    position: relative; /* 为提示框创建定位上下文 */
+    transition: background-color 0.2s;
+}
+
+.character-cell:hover {
+    background-color: rgba(124, 58, 237, 0.2);
+}
+
+/* 角色内容样式 */
+.character-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* 角色头像图标样式 */
+.character-head-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #374151;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.character-head-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 角色名称样式 */
+.character-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 角色提示框样式 - 修复布局和图标大小 */
+.character-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* 在单元格下方显示，留出间隙 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    width: 180px;
+    z-index: 1000; /* 提高z-index确保在最上层 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #4b5563;
+    pointer-events: none; /* 防止提示框干扰鼠标事件 */
+}
+
+/* 提示框内容样式 - 修复布局 */
+.tooltip-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: row; /* 确保水平排列 */
+    justify-content: center; /* 添加这一行，让内容整体居中 */
+}
+
+/* 提示框图标样式 - 调整大小 */
+.tooltip-icon {
+    width: 50px; /* 减小图标大小 */
+    height: 50px; /* 减小图标大小 */
+    background-color: #374151;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.tooltip-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 提示框文本样式 */
+.tooltip-text {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* 鼠标悬停时显示提示框 - 修复显示逻辑 */
+.character-cell:hover .character-tooltip {
+    display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .mastery-table,
+    .character-table {
+        font-size: 0.8rem;
+    }
+    
+    .mastery-table td,
+    .character-table td {
+        padding: 5px;
+    }
+    
+    .skill-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .advancement-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .character-head-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .advancement-cell {
+        gap: 4px;
+    }
+    
+    .advancement-text {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    
+    .advancement-tooltip {
+        width: 150px;
+        font-size: 12px;
+    }
+    
+    .character-tooltip {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    /* 提示框图标在移动端也保持小尺寸 */
+    .tooltip-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,214 @@
+/* 技能属性表格样式 */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 50px; /* 添加足够的底部空间 */
+}
+
+/* 技能表格标题样式 */
+.skills-table-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* 力量表格 - 红色系 */
+.strength-title {
+    color: #ffffff;
+    background-color: #dc2626;
+    border: 3px solid #b91c1c;
+}
+
+/* 灵巧表格 - 黄色系 */
+.agility-title {
+    color: #000000;
+    background-color: #fbbf24;
+    border: 3px solid #d97706;
+}
+
+/* 智力表格 - 蓝色系 */
+.intelligence-title {
+    color: #ffffff;
+    background-color: #2563eb;
+    border: 3px solid #1d4ed8;
+}
+
+/* 统御表格 - 绿色系 */
+.dominance-title {
+    color: #ffffff;
+    background-color: #16a34a;
+    border: 3px solid #15803d;
+}
+
+/* 技能表格样式 */
+.skill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    table-layout: fixed;
+    border: 2px solid; /* 添加表格边框 */
+}
+
+/* 力量技能表格样式 */
+.strength-skill {
+    border-color: #b91c1c !important; /* 红色边框 */
+    background-color: rgba(220, 38, 38, 0.3); /* 暗红色背景 */
+}
+
+/* 灵巧技能表格样式 */
+.agility-skill {
+    border-color: #d97706 !important; /* 黄色边框 */
+    background-color: rgba(251, 191, 36, 0.3); /* 暗黄色背景 */
+}
+
+/* 智力技能表格样式 */
+.intelligence-skill {
+    border-color: #1d4ed8 !important; /* 蓝色边框 */
+    background-color: rgba(37, 99, 235, 0.3); /* 暗蓝色背景 */
+}
+
+/* 统御技能表格样式 */
+.dominance-skill {
+    border-color: #15803d !important; /* 绿色边框 */
+    background-color: rgba(22, 163, 74, 0.3); /* 暗绿色背景 */
+}
+
+/* 24列基础样式 */
+.skill-table td {
+    border: 1px solid;
+    padding: 8px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+/* 第一行样式 - 主区域 */
+.main-area-row {
+    font-size: 16px;
+}
+
+/* 第二行样式 - 数据区域 */
+.data-area-row {
+    font-size: 12px;
+}
+
+/* 第三行样式 - 进阶区域 */
+.advancement-area-row {
+    font-size: 16px;
+}
+
+/* 技能图标样式 */
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #2d3748;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skill-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 进阶区域样式 */
+.advancement-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    min-height: 40px;
+}
+
+/* 进阶图标样式 */
+.advancement-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #374151;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.advancement-icon img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* 进阶文本样式 */
+.advancement-text {
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* 提示框样式 */
+.advancement-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%; /* 提示框在单元格下方 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f2937;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid #4b5563;
+    margin-top: 5px;
+}
+
+.advancement-area-row td:hover .advancement-tooltip {
+    display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .skill-table {
+        font-size: 0.8rem;
+    }
+    
+    .skill-table td {
+        padding: 5px;
+    }
+    
+    .skill-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .advancement-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .advancement-cell {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .advancement-text {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    
+    .advancement-tooltip {
+        width: 150px;
+        font-size: 12px;
+    }
+}
