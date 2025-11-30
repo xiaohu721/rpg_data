@@ -87,21 +87,21 @@ subcategoryTitles.forEach(title => {
         else if (colorClass === 'subcategory-epic') color = '#f59e0b';
         else if (colorClass === 'subcategory-affix') color = '#ff6b6b';
         else if (colorClass === 'subcategory-gem') color = '#00d4ff';
-        else if (colorClass === 'subcategory-attribute') color = '#06b6d4';
-        else if (colorClass === 'subcategory-profession') color = '#ef4444';
-        else if (colorClass === 'subcategory-mastery') color = '#f97316';
+        else if (colorClass === 'subcategory-attribute') color = '#f59e0b';
+        else if (colorClass === 'subcategory-profession') color = '#84cc16';
+        else if (colorClass === 'subcategory-mastery') color = '#a855f7';
         else if (colorClass === 'subcategory-normal') color = '#84cc16';
         else if (colorClass === 'subcategory-boss') color = '#dc2626';
         else if (colorClass === 'subcategory-property') color = '#7e22ce';
         else if (colorClass === 'subcategory-prologue') color = '#0ea5e9';
         else if (colorClass === 'subcategory-oasis') color = '#22c55e';
-        else if (colorClass === 'subcategory-desert') color = '#eab308';
+        else if (colorClass === 'subcategory-desert') color = '#f59e0b';
         else if (colorClass === 'subcategory-hell') color = '#ef4444';
         else if (colorClass === 'subcategory-ocean') color = '#3b82f6';
         else if (colorClass === 'subcategory-sky') color = '#8b5cf6';
-        else if (colorClass === 'subcategory-city') color = '#6b7280';
+        else if (colorClass === 'subcategory-city') color = '#ff6b6b';
         else if (colorClass === 'subcategory-snowfield') color = '#d1d5db';
-        else if (colorClass === 'subcategory-lightdark') color = '#1e293b';
+        else if (colorClass === 'subcategory-lightdark') color = '#eab308';
         
         // 更新内容区域标题
         const contentTitle = document.querySelector('.content-title');

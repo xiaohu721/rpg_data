@@ -997,7 +997,7 @@ function displayProfessionSkillsTable(contentBody, quality, color) {
     "mainArea": {
       "icon": "skill/BTNBlizzard.png",
       "name": "暴风雪",
-      "description": "开始引导，在目标区域持续降下暴风雪，对其中的敌人造成伤害，伤害间隔受技能急速影响"
+      "description": "开始引导，在目标区域持续降下暴风雪，对其中的敌人造成伤害，伤害间隔受一半的技能急速影响"
     },
     "dataArea": [
       "基础冷却：2",

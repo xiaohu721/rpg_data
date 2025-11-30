@@ -1,0 +1,81 @@
+/* 海洋地图样式 */
+.ocean-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: rgba(20, 40, 80, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.map-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3b82f6;
+    width: 100%;
+}
+
+.map-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.map-image {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    border: 2px solid #3b82f6;
+    display: block;
+}
+
+.map-buttons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.map-loading, .map-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 18px;
+}
+
+.map-loading { color: #a5b4cb; }
+.map-error { color: #ff6b6b; }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .ocean-container { padding: 10px; gap: 20px; }
+    .map-item { padding: 15px; margin-bottom: 30px; }
+    .map-title { font-size: 24px; margin-bottom: 15px; }
+    .map-loading, .map-error { height: 200px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    .map-title { font-size: 20px; }
+    .map-item { padding: 10px; }
+}

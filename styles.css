@@ -122,15 +122,15 @@ body {
 }
 
 .subcategory-attribute {
-    color: #06b6d4; /* 青色 */
+    color: #f59e0b; /* 橙色 */
 }
 
 .subcategory-profession {
-    color: #ef4444; /* 红色 */
+    color: #84cc16; /* 绿色 */
 }
 
 .subcategory-mastery {
-    color: #f97316; /* 橙色 */
+    color: #a855f7; /* 深紫色 */
 }
 
 .subcategory-normal {
@@ -154,7 +154,7 @@ body {
 }
 
 .subcategory-desert {
-    color: #eab308; /* 黄色 */
+    color: #f59e0b; /* 橙色 */
 }
 
 .subcategory-hell {
@@ -170,7 +170,7 @@ body {
 }
 
 .subcategory-city {
-    color: #6b7280; /* 灰色 */
+    color: #ff6b6b; /* 红色 */
 }
 
 .subcategory-snowfield {
@@ -178,7 +178,7 @@ body {
 }
 
 .subcategory-lightdark {
-    color: #1e293b; /* 深灰色 */
+    color: #eab308; /* 黄色 */
 }
 
 /* 主内容区样式 */
