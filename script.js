@@ -48,8 +48,8 @@ categoryTitles.forEach(title => {
         const descriptions = {
             '装备': '探索秘境世界中的各种装备，从普通到史诗，应有尽有',
             '技能': '学习强大的技能，提升你的战斗能力',
-            '怪物': '了解各种怪物的属性和弱点，制定有效战术',
-            '地图': '探索秘境世界的各个区域，发现隐藏的秘密'
+            '地图': '探索秘境世界的各个区域，发现隐藏的秘密',
+            'BD推荐': '查看玩家分享的优秀Build配置和玩法思路'
         };
         
         contentDescription.textContent = descriptions[titleText] || '探索秘境世界的各种资源';
@@ -127,9 +127,9 @@ subcategoryTitles.forEach(title => {
         } else if (category === 'skills') {
             titleText = `${quality}技能`;
             description = `探索秘境世界中的${quality}技能系统`;
-        } else if (category === 'monsters') {
+        } else if (category === 'bd') {
             titleText = `${quality}`;
-            description = `探索秘境世界中的${quality}信息`;
+            description = `获取${quality}的推荐`;
         } else if (category === 'maps') {
             titleText = `${quality}`;
             description = `探索秘境世界中的${quality}区域`;

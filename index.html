@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>秘境历险资料库</title>
+    <title>[时空旅人]资料库</title>
     <link rel="stylesheet" href="styles.css">
     <!-- 动态加载的CSS文件将由JavaScript处理 -->
 </head>
@@ -11,7 +11,7 @@
     <div class="container">
         <!-- 左侧导航栏 -->
         <div class="sidebar">
-            <h1 class="main-title">秘境历险资料库</h1>
+            <h1 class="main-title">时空旅人资料库</h1>
             
             <!-- 装备二级标题 -->
             <div class="category-title active">
@@ -56,23 +56,6 @@
                 </div>
             </div>
             
-            <!-- 怪物二级标题 -->
-            <div class="category-title">
-                <i class="fas fa-dragon"></i> 怪物
-            </div>
-            <!-- 怪物的三级标题 -->
-            <div class="subcategories">
-                <div class="subcategory-title subcategory-normal" data-quality="normal" data-category="monsters">
-                    <i class="fas fa-circle"></i> 普通怪物
-                </div>
-                <div class="subcategory-title subcategory-boss" data-quality="boss" data-category="monsters">
-                    <i class="fas fa-circle"></i> 首领BOSS
-                </div>
-                <div class="subcategory-title subcategory-property" data-quality="property" data-category="monsters">
-                    <i class="fas fa-circle"></i> 属性加成
-                </div>
-            </div>
-            
             <!-- 地图二级标题 -->
             <div class="category-title">
                 <i class="fas fa-map"></i> 地图
@@ -107,6 +90,17 @@
                     <i class="fas fa-circle"></i> ⑧光暗DLC
                 </div>
             </div>
+            
+            <!-- BD推荐二级标题 -->
+            <div class="category-title">
+                <i class="fas fa-star"></i> BD推荐
+            </div>
+            <!-- BD推荐的三级标题 -->
+            <div class="subcategories">
+                <div class="subcategory-title subcategory-bd" data-quality="waiting" data-category="bd">
+                    <i class="fas fa-circle"></i> 等待补充
+                </div>
+            </div>
         </div>
         
         <!-- 主内容区 -->
@@ -117,7 +111,7 @@
             </div>
             
             <div class="content-body" id="content-body">
-                <p>欢迎来到秘境历险装备资料库！这里汇集了游戏中所有装备的详细信息。</p>
+                <p>欢迎来到时空旅人装备资料库！这里汇集了游戏中所有装备的详细信息。</p>
                 <p>您可以通过左侧导航栏查看不同品质的装备：</p>
                 <ul class="quality-list">
                     <li><span class="quality-common">普通装备</span> - 基础装备，可以获得很多随机词缀</li>

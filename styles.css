@@ -133,18 +133,6 @@ body {
     color: #a855f7; /* 深紫色 */
 }
 
-.subcategory-normal {
-    color: #84cc16; /* 绿色 */
-}
-
-.subcategory-boss {
-    color: #dc2626; /* 深红色 */
-}
-
-.subcategory-property {
-    color: #7e22ce; /* 深紫色 */
-}
-
 .subcategory-prologue {
     color: #0ea5e9; /* 亮蓝色 */
 }
@@ -181,6 +169,9 @@ body {
     color: #eab308; /* 黄色 */
 }
 
+.subcategory-bd {
+    color: #ffd700; /* 金色 */
+}
 /* 主内容区样式 */
 .main-content {
     flex: 1;
